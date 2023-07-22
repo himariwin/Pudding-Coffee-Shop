@@ -1,0 +1,264 @@
+.sideBar {
+    background-color: var(--whiteColor);
+    box-shadow: rgba(100, 100, 111, .2) 0px 7px 29px 0px;
+    width: 20%;
+    height: 100%;
+    overflow: auto;
+    gap: 3rem
+}
+
+.logoDiv {
+    padding: 1.5rem 1.5rem 0;
+    cursor: pointer
+}
+
+.logoDiv img {
+    max-width: 45px;
+    margin-right: .5rem;
+    border-radius: 2px;
+    padding: .2rem
+}
+
+.logoDiv h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--h2FontSize);
+    color: var(--PrimaryColor)
+}
+
+.menuDiv .smallText,
+.settingsDiv .smallText {
+    white-space: auto
+}
+
+.menuDiv .divTitle,
+.settingsDiv .divTitle {
+    font-size: var(--h3FontSize);
+    color: var(--blackColor);
+    padding: 0 1.5rem 1.5rem
+}
+
+.menuDiv .menuLists .listItem,
+.settingsDiv .menuLists .listItem {
+    padding: .2rem 1.5rem;
+    width: 100%;
+    position: relative
+}
+
+.menuDiv .menuLists .listItem::before,
+.settingsDiv .menuLists .listItem::before {
+    position: absolute;
+    content: "";
+    height: 0%;
+    left: 0;
+    width: 5px;
+    bottom: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--PrimaryColor)
+}
+
+.menuDiv .menuLists .listItem .menuLink,
+.settingsDiv .menuLists .listItem .menuLink {
+    color: var(--grayText);
+    font-weight: 500;
+    transition: 0
+}
+
+.menuDiv .menuLists .listItem .menuLink .icon,
+.settingsDiv .menuLists .listItem .menuLink .icon {
+    margin-right: .5rem
+}
+
+.menuDiv .menuLists .listItem:hover .menuLink,
+.settingDiv .menuLists .listItem:hover .menuLink {
+    color: var(--PrimaryColor);
+    transition: 0
+}
+
+.menuDiv .menuLists .listItem:hover::before,
+.settingsDiv .menuLists .listItem:hover::before {
+    height: 100%;
+    transition: .5s ease
+}
+
+.menuDiv .menuLists .listItem.active::before,
+.settingsDiv .menuLists .listItem.active::before {
+    height: 100%
+}
+
+.sideBarCard {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    position: relative
+}
+
+.sideBarCard .circle {
+    position: absolute;
+    border: 10px solid var(--whiteColor);
+    border-radius: 50%;
+    top: -20px;
+    right: 50%;
+    transform: translate(50%);
+    z-index: 100;
+    background-color: var(--HoverColor)
+}
+
+.sideBarCard .circle .icon {
+    font-size: 3rem
+}
+
+.sideBarCard .circle b:nth-child(1) {
+    position: absolute;
+    top: 25px;
+    left: -20px;
+    height: 24px;
+    width: 15px;
+    background: rgba(0, 0, 0, 0)
+}
+
+.sideBarCard .circle b:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 10px;
+    background-color: var(--HoverColor)
+}
+
+.sideBarCard .circle b:nth-child(2) {
+    position: absolute;
+    top: 25px;
+    right: -20px;
+    height: 24px;
+    width: 15px;
+    background: rgba(0, 0, 0, 0)
+}
+
+.sideBarCard .circle b:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    background-color: var(--HoverColor)
+}
+
+.cardContent p{
+    color: var(--whiteColor);
+}
+
+.sideBarCard .cardContent {
+    position: relative;
+    padding: 1rem;
+    background-color: var(--HoverColor);
+    border-radius: 10px;
+    overflow: hidden
+}
+
+.sideBarCard h3 {
+    font-size: var(--h3FontSize);
+    margin-top: 1rem;
+    padding: 1rem 0;
+    font-weight: 800;
+    color: var(--whiteColor)
+}
+
+.sideBarCard p {
+    font-size: var(--normalFontSize);
+    padding-bottom: 1rem;
+    font-weight: 500
+}
+
+.sideBarCard .btn {
+    position: relative;
+    color: var(--textColor);
+    z-index: 1000
+}
+
+.sideBarCard .circle1,
+.sideBarCard .circle2 {
+    position: absolute;
+    background-color: var(--paleGreen);
+    border-radius: 50%;
+    opacity: .7
+}
+
+.sideBarCard .circle1 {
+    height: 100px;
+    width: 100px;
+    top: -50px;
+    left: -50px
+}
+
+.sideBarCard .circle2 {
+    height: 100px;
+    width: 100px;
+    bottom: -50px;
+    right: -50px;
+    z-index: 1
+}
+
+@media screen and (max-width: 992px) {
+    .sideBar {
+        padding-bottom: 2rem
+    }
+
+    .sideBar .sideBarCard {
+        display: none !important
+    }
+}
+
+@media screen and (max-width: 745px) {
+    .sideBar .logoDiv {
+        text-align: center;
+        margin: auto;
+        padding: 1.5rem .5rem 0
+    }
+
+    .sideBar .logoDiv img {
+        max-width: 100%;
+        margin: 0;
+        border-radius: 10px;
+        padding: .5rem
+    }
+
+    .sideBar .logoDiv h2 {
+        display: none
+    }
+
+    .menuDiv .divTitle,
+    .menuDiv .smallText,
+    .settingsDiv .divTitle,
+    .settingsDiv .smallText {
+        display: none
+    }
+
+    .menuDiv .menuLists .listItem .menuLink,
+    .settingsDiv .menuLists .listItem .menuLink {
+        justify-content: center
+    }
+
+    .menuDiv .menuLists .listItem .menuLink .icon,
+    .settingsDiv .menuLists .listItem .menuLink .icon {
+        font-size: var(--h1FontSize)
+    }
+}
+
+@media screen and (max-width: 390px) {
+
+    .sideBar .menuDiv .menuLists .listItem,
+    .sideBar .settingsDiv .menuLists .listItem {
+        padding: .2rem .5rem
+    }
+
+    .sideBar .menuDiv .menuLists .listItem .menuLink,
+    .sideBar .settingsDiv .menuLists .listItem .menuLink {
+        justify-content: center
+    }
+}
+

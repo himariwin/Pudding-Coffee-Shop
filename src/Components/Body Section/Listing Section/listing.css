@@ -1,0 +1,210 @@
+.lisitingSection {
+    flex-basis: 70%
+}
+
+.lisitingSection .heading {
+    width: 100%;
+    justify-content: space-between
+}
+
+.lisitingSection .heading h1 {
+    font-size: var(--h2FontSize);
+    color: var(--blackColor);
+    font-weight: 700
+}
+
+.lisitingSection .heading .btn {
+    border: 1px solid rgba(0, 0, 0, 0)
+}
+
+.lisitingSection .heading .btn:hover {
+    border: 1px solid var(--PrimaryColor)
+}
+
+.lisitingSection .secContainer {
+    width: 100%;
+    margin: 1rem 0;
+    gap: 2rem .5rem;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+
+.lisitingSection .secContainer .singleItem {
+    position: relative;
+    width: 150px;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--itemCardColor);
+    box-shadow: rgba(149, 157, 165, .2) 0px 8px 24px;
+    overflow: hidden
+}
+
+.lisitingSection .secContainer .singleItem:hover {
+    background-color: var(--itemCardHover);
+    box-shadow: 0 2px 2px var(--inputColor)
+}
+
+.lisitingSection .secContainer .singleItem img {
+    width: 120px;
+    height: 150px;
+    object-fit: cover
+}
+
+.lisitingSection .secContainer .singleItem .icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--PrimaryColor)
+}
+
+.lisitingSection .secContainer .singleItem h3 {
+    font-size: var(--h3FontSize);
+    color: var(--blackColor);
+    padding: 1rem 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden
+}
+
+.lisitingSection .sellers {
+    width: 100%;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: flex-start
+}
+
+.lisitingSection .sellers .topSellers .heading,
+.lisitingSection .sellers .featuredSellers .heading {
+    padding: 1rem 0
+}
+
+.lisitingSection .sellers .topSellers .heading .btn,
+.lisitingSection .sellers .featuredSellers .heading .btn {
+    padding: .5rem 1rem
+}
+
+.lisitingSection .sellers .topSellers .card,
+.lisitingSection .sellers .featuredSellers .card {
+    position: relative;
+    padding: 2rem 2rem;
+    border-radius: 1rem;
+    gap: 1rem;
+    box-shadow: 0 2px 4px var(--inputColor);
+    background-color: var(--whiteColor);
+    box-shadow: rgba(149, 157, 165, .2) 0px 8px 24px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    transition: .5s ease;
+    overflow: hidden
+}
+
+.lisitingSection .sellers .topSellers .card::before,
+.lisitingSection .sellers .featuredSellers .card::before {
+    content: "";
+    position: absolute;
+    right: -35px;
+    top: -35px;
+    width: 70px;
+    height: 70px;
+    background-color: var(--HoverColor);
+    border-radius: 50%;
+    opacity: .6
+}
+
+.lisitingSection .sellers .topSellers .card:hover,
+.lisitingSection .sellers .featuredSellers .card:hover {
+    border: 1px solid var(--PrimaryColor)
+}
+
+.lisitingSection .sellers .topSellers .card:hover img,
+.lisitingSection .sellers .featuredSellers .card:hover img {
+    transform: translateY(-10px)
+}
+
+.lisitingSection .sellers .topSellers .card .users,
+.lisitingSection .sellers .featuredSellers .card .users {
+    padding-right: 1rem;
+    border-right: 2px solid #e7e7e7
+}
+
+.lisitingSection .sellers .topSellers .card .users img,
+.lisitingSection .sellers .featuredSellers .card .users img {
+    width: 25px;
+    height: 25px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 2px solid var(--inputColor);
+    transition: .5s ease;
+    transition-delay: var(--i)
+}
+
+.lisitingSection .sellers .topSellers .card .users img:nth-child(1),
+.lisitingSection .sellers .featuredSellers .card .users img:nth-child(1) {
+    --i: .1s
+}
+
+.lisitingSection .sellers .topSellers .card .users img:nth-child(2),
+.lisitingSection .sellers .featuredSellers .card .users img:nth-child(2) {
+    --i: .2s
+}
+
+.lisitingSection .sellers .topSellers .card .users img:nth-child(3),
+.lisitingSection .sellers .featuredSellers .card .users img:nth-child(3) {
+    --i: .3s
+}
+
+.lisitingSection .sellers .topSellers .card .users img:nth-child(4),
+.lisitingSection .sellers .featuredSellers .card .users img:nth-child(4) {
+    --i: .4s
+}
+
+.lisitingSection .sellers .topSellers .card .cardText span,
+.lisitingSection .sellers .featuredSellers .card .cardText span {
+    color: var(--blackColor);
+    font-weight: 500
+}
+
+.lisitingSection .sellers .topSellers .card .cardText span small,
+.lisitingSection .sellers .featuredSellers .card .cardText span small {
+    font-weight: 400
+}
+
+.lisitingSection .sellers .topSellers .card .cardText span small .date,
+.lisitingSection .sellers .featuredSellers .card .cardText span small .date {
+    margin-left: 1rem
+}
+
+@media screen and (max-width: 990px) {
+    .lisitingSection .sellers .card {
+        flex-direction: column
+    }
+}
+
+@media screen and (max-width: 918px) {
+    .lisitingSection .singleItem {
+        width: 200px !important
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .lisitingSection .sellers {
+        flex-direction: column
+    }
+
+    .lisitingSection .sellers .card .users {
+        border-right: none !important
+    }
+
+    .lisitingSection .sellers .topSellers,
+    .lisitingSection .sellers .featuredSellers {
+        width: 100%
+    }
+
+    .lisitingSection .singleItem {
+        width: 100% !important
+    }
+}

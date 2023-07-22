@@ -1,0 +1,157 @@
+@import url(https://fonts.googleapis.com/css?family=Abyssinica+SIL:regular);
+
+
+* {
+     padding: 0;
+     box-sizing: border-box;
+     margin: 0;
+     font-family: 'Montserrat', sans-serif;
+     transition: 0.3s ease;
+}
+
+
+
+:root {
+
+     /*  Colors and Styles (Default) */
+
+     --PrimaryColor: hsl(94, 59%, 35%);
+     --HoverColor: #bdf094;
+     --paleGreen: hsl(96, 75%, 89%);
+     --whiteColor: hsl(0, 0%, 100%);
+     --blackColor: hsl(0, 0%, 18%);
+     --textColor: hsl(240, 1%, 48%);
+     --bgColor: hsl(220, 10%, 94%);
+     --grayText: #909090;
+     --inputColor: hsl(330, 12%, 97%);
+     --itemCardColor: hsl(120, 5%, 88%);
+     --itemCardHover: hsl(120, 27%, 87%);
+
+     /*  Colors and Styles (Default) */
+
+     /* Font and TypoGraphy */
+
+     --biggestFontSize: 2.5rem;
+     --h1FontSize: 1.5rem;
+     --h2FontSize: 1.25rem;
+     --h3FontSize: 1rem;
+     --normalFontSize: .938rem;
+     --smallFontSize: .813rem;
+     --smallestFontSize: .75rem;
+
+     /* Font and TypoGraphy */
+
+}
+
+
+
+/* Default  Styles*/
+
+html {
+     font-size: 90%;
+}
+
+a {
+     text-decoration: none;
+}
+
+li {
+     list-style: none;
+}
+
+.icon {
+     font-size: var(--h2FontSize);
+     cursor: pointer;
+}
+
+img {
+     width: 100%;
+     height: auto;
+}
+
+
+.flex {
+     display: flex;
+     align-items: center;
+}
+
+.grid {
+     display: grid;
+     align-items: center;
+     gap: 1.5rem;
+}
+
+.btn {
+     border: 1px solid transparent;
+     outline: none;
+     cursor: pointer;
+     border-radius: 10px;
+     box-shadow: 0 2px 4px var(--inputColor);
+     color: var(--textColor);
+     padding: .8rem 1rem;
+}
+
+.btn .icon {
+     margin-left: .5rem;
+}
+
+.btn:hover {
+     background: var(--paleGreen);
+     color: var(--PrimaryColor);
+     border: 1px solid var(--textColor);
+}
+
+
+
+body {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: auto;
+     padding: 1rem;
+}
+
+.container {
+    position: relative;
+    width: 95vw;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bgColor);
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+section {
+    margin: 3rem 0 0 0;
+}
+
+/* Hide the Scroll Thump */
+
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+// Media Queirs for Max Width 1024px ============>>
+@media screen and (max-width:1024px) {
+
+    .heading {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+
+        h1,
+        h3 {
+           font-size: var(--h3FontSize) !important;
+           white-space: pre;
+        }
+    }
+}

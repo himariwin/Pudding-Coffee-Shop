@@ -1,0 +1,287 @@
+.sideBar {
+    background-color: var(--whiteColor);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 20%;
+    height: 100%;
+    overflow: auto;
+    gap: 3rem;
+}
+
+.logoDiv {
+    padding: 1.5rem 1.5rem 0;
+    cursor: pointer;
+
+    img {
+     max-width: 20px;
+     margin-right: .5rem;
+     background: var(--inputColor);
+     border-radius: 2px;
+     padding: .2rem;
+    }
+
+    h2 {
+     font-size: var(--h2FontSize);
+     color: var(--PrimaryColor);
+    }
+}
+
+.menuDiv, .settingDiv {
+
+    .smallText{
+     white-space: auto;
+    }
+    .divTitle {
+     font-size: var(--h3FontSize);
+     color: var(--blackColor);
+     padding: 0 1.5rem 1.5rem;
+    }
+
+    .menuLists {
+     .listItem {
+          padding: .2rem 1.5rem;
+          width: 100%;
+          position: relative;
+
+          &::before {
+               position: absolute;
+               content: '';
+               height: 0%;
+               left: 0;
+               width: 5px;
+               bottom: 0;
+               border-top-right-radius: 10px;
+               border-bottom-right-radius: 10px;
+               background-color: var(--PrimaryColor);
+            }
+
+            .menuLink {
+               color: var(--grayText);
+               font-weight: 500;
+               transition: 0;
+
+               .icon {
+                    margin-right: .5rem;
+               }
+
+            }
+
+            &:hover .menuLink {
+               color: var(--PrimaryColor);
+               transition: 0;
+            }
+
+            &:hover::before {
+               height: 100%;
+               transition: .5s ease;
+            }
+
+            &.active {
+               &::before {
+                    height: 100%;
+                }
+            }
+        }
+
+    }
+}
+
+
+
+.sideBarCard {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+
+    .circle {
+     position: absolute;
+     border: 10px solid var(--whiteColor);
+     border-radius: 50%;
+     top: -20px;
+     right: 50%;
+     transform: translate(50%);
+     z-index: 100;
+     background-color: var(--HoverColor);
+
+
+
+        .icon {
+          font-size: 3rem;
+        }
+
+        b:nth-child(1) {
+          position: absolute;
+          top: 25px;
+          left: -20px;
+          height: 24px;
+          width: 15px;
+          background: #0000;
+
+
+
+            &::before {
+               content: '';
+               position: absolute;
+               top: 0;
+               left: 0px;
+               width: 100%;
+               height: 100%;
+               border-top-right-radius: 10px;
+               background-color: var(--HoverColor);
+            }
+
+        }
+
+        b:nth-child(2) {
+          position: absolute;
+          top: 25px;
+          right: -20px;
+          height: 24px;
+          width: 15px;
+          background: #0000;
+
+
+
+            &::before {
+               content: '';
+                   position: absolute;
+                   top: 0;
+                   left: 0px;
+                   width: 100%;
+                   height: 100%;
+                   border-top-left-radius: 10px;
+                   background-color: var(--HoverColor);
+            }
+
+        }
+
+
+    }
+
+
+    .cardContent {
+        position: relative;
+        padding: 1rem;
+        background-color: var(--HoverColor);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    h3 {
+        font-size: var(--h3FontSize);
+        margin-top: 1rem;
+        padding: 1rem 0;
+        font-weight: 800;
+        color: var(--blackColor);
+    }
+
+
+    p {
+        font-size: var(--normalFontSize);
+        color: var(--textColor);
+        padding-bottom: 1rem;
+        font-weight: 500;
+    }
+
+    .btn {
+        position: relative;
+        color: var(--textColor);
+        z-index: 1000;
+    }
+
+    .circle1,
+    .circle2 {
+        position: absolute;
+        background-color: var(--paleGreen);
+        border-radius: 50%;
+        opacity: 0.7;
+    }
+
+    .circle1 {
+        height: 100px;
+        width: 100px;
+        top: -50px;
+        left: -50px;
+    }
+
+    .circle2 {
+        height: 100px;
+        width: 100px;
+        bottom: -50px;
+        right: -50px;
+        z-index: 1;
+    }
+
+
+}
+
+// Media Queirs for SidBar ============>>
+@media screen and (max-width:992px) {
+    .sideBar {
+        padding-bottom: 2rem;
+
+        .sideBarCard {
+            display: none !important;
+        }
+    }
+}
+
+
+// Media Queirs for SidBar ============>>
+@media screen and (max-width:745px) {
+    .sideBar {
+        .logoDiv {
+            text-align: center;
+            margin: auto;
+            padding: 1.5rem .5rem 0;
+
+            img {
+               max-width: 100%;
+               margin: 0;
+               border-radius: 10px;
+               padding: .5rem;
+            }
+
+            h2 {
+               display: none;
+            }
+        }
+    }
+
+    .menuDiv,
+    .settingDiv {
+
+        .divTitle,
+        .smallText {
+            display: none;
+        }
+
+        .menuLists {
+            .listItem {
+                .menuLink {
+                  justify-content: center;
+                    .icon{
+                        font-size: var(--h1FontSize);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:390px) {
+    .sideBar {
+        .menuDiv,
+        .settingDiv {
+            .menuLists {
+                .listItem {
+                    padding: .2rem .5rem;
+
+                    .menuLink {
+                     justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}
